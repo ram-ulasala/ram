@@ -2,7 +2,7 @@
   hosts:  local
   connection: local
   vars_files:
-  - 05-palybook.yaml
+  - 05-playbook.yaml
   tasks:
   - name: print info
     ansible.builtin.debug:
