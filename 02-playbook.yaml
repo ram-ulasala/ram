@@ -1,0 +1,5 @@
+- name: hellow
+  hosts:  web
+  tasks:
+  - name: prinit ther hellow
+    ansible.builtin.debug:
