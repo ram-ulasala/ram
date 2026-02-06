@@ -1,0 +1,10 @@
+- name: check
+  hosts:  local
+  connection: local
+  vars:
+    my_number:  15
+  tasks:  
+  - name: print
+    ansible.builtin.debug:
+      msg:  given
+    when: my_number>10
