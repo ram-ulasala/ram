@@ -1,0 +1,9 @@
+- name: varible form files
+  hosts:  local
+  connection: local
+  vars_files:
+  - 05-palybook.yaml
+  tasks:
+  - name: print info
+    ansible.builtin.debug:
+      msg:  "course is {{COURSE}},  duration is {{DURATION}}, trainer is{{TRAINER}}"
