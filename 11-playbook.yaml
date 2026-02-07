@@ -8,3 +8,16 @@
     loop:
     - ram
     - pavani
+
+- name: install packages
+  hosts:  web
+  become: yes
+  tasks:
+  - name: intall
+    ansible.builtin.package:
+      name: "{{ item  }}"
+      state:  installed
+    loop:
+    - mysql
+    - git
+    - zip
