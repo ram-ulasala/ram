@@ -31,5 +31,3 @@
       state:  "{{ item.state  }}"
     loop:
     - { name: 'git',  state:  'absent'  }
-    - git
-    - zip
