@@ -21,3 +21,15 @@
     - mysql
     - git
     - zip
+- name: install packages
+  hosts:  web
+  become: yes
+  tasks:
+  - name: intall
+    ansible.builtin.package:
+      name: "{{ item.name  }}"
+      state:  "{{ item.state  }}"
+    loop:
+    - { name: 'git',  state:  'absent'  }
+    - git
+    - zip
